@@ -12,35 +12,73 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@mipmap/love_hand"/>
-    <EditText
-        android:id = "@+id/email"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:text="@string/email"
-        android:theme="@color/primaryColor"
-        android:layout_marginTop="20dp"
-        android:inputType = "textEmailAddress" />
+<!--    <EditText-->
+<!--        android:id = "@+id/email"-->
+<!--        android:layout_width = "250dp"-->
+<!--        android:layout_height = "48dp"-->
+<!--        android:text="@string/email"-->
+<!--        android:textColor="@color/primaryColor"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:inputType = "textEmailAddress" />-->
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-        <EditText
-            android:id = "@+id/password"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:text="@string/password"
-            android:theme="@color/primaryColor"
-            android:inputType = "textPassword" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="show"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/email" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:endIconMode="password_toggle">
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:orientation="horizontal">-->
+<!--        <EditText-->
+<!--            android:id = "@+id/password"-->
+<!--            android:layout_width = "wrap_content"-->
+<!--            android:layout_height = "wrap_content"-->
+<!--            android:text="@string/password"-->
+<!--            android:theme="@color/primaryColor"-->
+<!--            android:inputType = "textPassword" />-->
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="show"/>-->
+
+<!--    </LinearLayout>-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
